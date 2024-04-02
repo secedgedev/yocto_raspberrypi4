@@ -1,0 +1,20 @@
+diff --git a/recipes-kernel/linux/files/secedge.cfg b/recipes-kernel/linux/files/secedge.cfg
+new file mode 100644
+index 0000000..4443a5d
+--- /dev/null
++++ b/recipes-kernel/linux/files/secedge.cfg
+@@ -0,0 +1 @@
++CONFIG_XFRM_INTERFACE=y
+\ No newline at end of file
+diff --git a/recipes-kernel/linux/linux-raspberrypi_5.15.bbappend b/recipes-kernel/linux/linux-raspberrypi_5.15.bbappend
+new file mode 100644
+index 0000000..0a3e0a6
+--- /dev/null
++++ b/recipes-kernel/linux/linux-raspberrypi_5.15.bbappend
+@@ -0,0 +1,5 @@
++FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
++
++SRC_URI:append = " \
++	file://secedge.cfg \
++"
+\ No newline at end of file

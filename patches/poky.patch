@@ -1,0 +1,12 @@
+diff --git a/meta/recipes-extended/images/core-image-full-cmdline.bb b/meta/recipes-extended/images/core-image-full-cmdline.bb
+index 4d69073d9d..25a013ac07 100644
+--- a/meta/recipes-extended/images/core-image-full-cmdline.bb
++++ b/meta/recipes-extended/images/core-image-full-cmdline.bb
+@@ -6,6 +6,7 @@ IMAGE_FEATURES += "splash ssh-server-openssh"
+ IMAGE_INSTALL = "\
+     packagegroup-core-boot \
+     packagegroup-core-full-cmdline \
++    packagegroup-core-buildessential \
+     ${CORE_IMAGE_EXTRA_INSTALL} \
+     "
+ 
